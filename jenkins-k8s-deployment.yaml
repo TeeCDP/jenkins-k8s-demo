@@ -19,7 +19,6 @@ spec:
       containers:
         - image: jenkins/jenkins
           name: k8s-jenkins-container
-          imagePullPolicy: Never
           ports:
             - containerPort: 8080
             - containerPort: 50000
