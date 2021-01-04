@@ -19,6 +19,9 @@ spec:
       containers:
         - image: jenkins/jenkins
           name: k8s-jenkins-container
+          env:
+            - name: JAVA_OPTS
+              value: -Djenkins.install.runSetupWizard=false
           ports:
             - containerPort: 8080
             - containerPort: 50000
